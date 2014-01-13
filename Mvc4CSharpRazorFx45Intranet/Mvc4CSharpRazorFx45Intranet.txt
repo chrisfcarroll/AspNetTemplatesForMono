@@ -1,0 +1,36 @@
+Mvc4CSharpRazorFx45Intranet
+
+Tested on Mono Version
+mono --version
+Mono JIT compiler version 3.2.5 ((no/964e8f0 Thu Nov 14 14:48:50 EST 2013)
+Copyright (C) 2002-2012 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
+    TLS:           normal
+    SIGSEGV:       altstack
+    Notification:  kqueue
+    Architecture:  x86
+    Disabled:      none
+    Misc:          softdebug 
+    LLVM:          yes(3.3svn-mono)
+    GC:            sgen
+
+
+Open Solution
+
+1. System.UnauthorizedAccessException
+Access to the path "/Library/Frameworks/Mono.framework/Versions/3.2.5/etc/mono/registry" is denied.
+
+Solution:
+sudo mkdir /Library/Frameworks/Mono.framework/Versions/3.2.5/etc/mono/registry
+sudo chmod g+rwx /Library/Frameworks/Mono.framework/Versions/3.2.5/etc/mono/registry
+
+ie members of admin group can read/write
+
+
+2. System.TypeLoadException
+Could not load type 'System.Data.Entity.Migrations.Sql.SqlCeMigrationSqlGenerator' from assembly 'EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+
+Resolution:
+Remove references to Entity framework from the config and from Project references
+Entity.Framework
+System.Data.Entity
+System.Web.Entity

@@ -7,4 +7,4 @@ The 2 basic templates, Mvc4CSharpRazorFx40Intranet and Mvc4CSharpRazorFx45Intran
 Although they are NuGet-enabled, all the required dlls are in the repo. They are most recently tested 
 in Xamarin Studio on Mac OS X running Mono 3.2.5, but the .Net 4.0 template ran on Mono 2.8.
 
-They were created from the Visual Studio project templates, VS2010 for the 4.0 template, & VS2012 for the 4.5 template.
+They were created from the Visual Studio MVC4 Intranet templates, VS2010 for the 4.0 template, & VS2012 for the 4.5 template.
